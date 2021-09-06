@@ -1,0 +1,437 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F10C65FD-B663-4E99-9A66-FF90D6BECE2C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlyToTheStar</RootNamespace>
+    <AssemblyName>FlyToTheStar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44353</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.1\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TencentCloud, Version=3.0.275.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TencentCloudSDK.3.0.275\lib\net45\TencentCloud.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\BackState\ExamManage\examindex.css" />
+    <Content Include="CSS\BackState\ExamManage\index.css" />
+    <Content Include="CSS\BackState\ExamManage\layui.css" />
+    <Content Include="CSS\BackState\Rank\rank.css" />
+    <Content Include="CSS\BackState\TestManage\TestManage.css" />
+    <Content Include="CSS\BackState\TestManage\layui.css" />
+    <Content Include="CSS\BackState\TestManage\ystep.css" />
+    <Content Include="CSS\BackState\Test\admin.css" />
+    <Content Include="CSS\BackState\Test\Common.css" />
+    <Content Include="CSS\BackState\Test\iconfont.css" />
+    <Content Include="CSS\BackState\Test\main.css" />
+    <Content Include="CSS\BackState\Test\test.css" />
+    <Content Include="CSS\BackState\TopicManage\excerise.css" />
+    <Content Include="CSS\BackState\TopicManage\TestManage.css" />
+    <Content Include="CSS\BackState\UserPage\tikuexam.css" />
+    <Content Include="CSS\Login\bootstrap.min.css" />
+    <Content Include="CSS\Login\gloab.css" />
+    <Content Include="CSS\Login\login.css" />
+    <Content Include="CSS\Login\Regist.css" />
+    <Content Include="CSS\Login\style.css" />
+    <Content Include="CSS\MainPage\bg_all.png" />
+    <Content Include="CSS\MainPage\quote-grey.jpg" />
+    <Content Include="CSS\MainPage\scroll.css" />
+    <Content Include="CSS\MainPage\style.css" />
+    <Content Include="CSS\MainPage\swiper.css" />
+    <Content Include="fonts\bootstrap.svg" />
+    <Content Include="fonts\iconfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\1-130929131011.png" />
+    <Content Include="Images\10140568.jpg" />
+    <Content Include="Images\3479036.jpg" />
+    <Content Include="Images\4920841.jpg" />
+    <Content Include="Images\9221006.jpg" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\add2.png" />
+    <Content Include="Images\arrows.png" />
+    <Content Include="Images\ban.jpg" />
+    <Content Include="Images\ban2.jpg" />
+    <Content Include="Images\ban3.jpg" />
+    <Content Include="Images\ban4.jpg" />
+    <Content Include="Images\banner2.png" />
+    <Content Include="Images\btn.png" />
+    <Content Include="Images\findbtn.png" />
+    <Content Include="Images\findbtn2.png" />
+    <Content Include="Images\findlogo.png" />
+    <Content Include="Images\hidePwd.png" />
+    <Content Include="Images\hot.png" />
+    <Content Include="Images\Login\hidePwd.png" />
+    <Content Include="Images\Login\icons\auth_code.svg" />
+    <Content Include="Images\Login\icons\icp_record_filing.svg" />
+    <Content Include="Images\Login\icons\lock.svg" />
+    <Content Include="Images\Login\icons\national_emblem.svg" />
+    <Content Include="Images\Login\icons\qq.svg" />
+    <Content Include="Images\Login\icons\user.svg" />
+    <Content Include="Images\Login\icons\wechat.svg" />
+    <Content Include="Images\Login\icons\weibo.svg" />
+    <Content Include="Images\Login\logo.svg" />
+    <Content Include="Images\Login\logo_z.svg" />
+    <Content Include="Images\Login\qr.png" />
+    <Content Include="Images\Login\showPwd.png" />
+    <Content Include="Images\Login\timg.jpg" />
+    <Content Include="Images\Login\yzm.jpg" />
+    <Content Include="Images\Login\登录用.png" />
+    <Content Include="Images\Login\飞星网Logo.png" />
+    <Content Include="Images\Login\飞星网Logo2.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\pic.png" />
+    <Content Include="Images\pointes_blue.png" />
+    <Content Include="Images\showPwd.png" />
+    <Content Include="Images\taggo.png" />
+    <Content Include="Images\touxiang\1.jpg" />
+    <Content Include="Images\touxiang\2.jpg" />
+    <Content Include="Images\touxiang\user.jpg" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\yzm.jpg" />
+    <Content Include="Images\入门教程.png" />
+    <Content Include="Images\发帖答疑.png" />
+    <Content Include="Images\对错.png" />
+    <Content Include="Images\我的主页.png" />
+    <Content Include="Images\touxiang\未登录头像.png" />
+    <Content Include="Images\未登录头像.png" />
+    <Content Include="Images\积分排行.png" />
+    <Content Include="Images\箭头.png" />
+    <Content Include="Images\考试管理.png" />
+    <Content Include="Images\讲师.jpg" />
+    <Content Include="Images\试卷管理.png" />
+    <Content Include="Images\退出.png" />
+    <Content Include="Images\选项卡图标.png" />
+    <Content Include="Images\题库练习.png" />
+    <Content Include="Images\飞星Logo2.jpg" />
+    <Content Include="Images\飞星网Logo.png" />
+    <Content Include="Images\飞星网Logo2.png" />
+    <Content Include="Images\飞星网首页Logo.png" />
+    <Content Include="JavaScripts\BackState\ExamManage\ExamManage.js" />
+    <Content Include="JavaScripts\BackState\ExamManage\index.js" />
+    <Content Include="JavaScripts\BackState\ExamManage\jquery-3.3.1.min.js" />
+    <Content Include="JavaScripts\BackState\ExamManage\layui.js" />
+    <Content Include="JavaScripts\BackState\TestManage\setStep.js" />
+    <Content Include="JavaScripts\BackState\TestManage\TestManage.js" />
+    <Content Include="JavaScripts\BackState\Test\jquery-1.11.3.min.js" />
+    <Content Include="JavaScripts\BackState\Test\jquery.countdown.js" />
+    <Content Include="JavaScripts\jquery-3.3.1.min.js" />
+    <Content Include="JavaScripts\Login\login.js" />
+    <Content Include="JavaScripts\Login\Login\login.js" />
+    <Content Include="JavaScripts\Login\register.js" />
+    <Content Include="JavaScripts\MainPage\jquery-1.7.2.min.js" />
+    <Content Include="JavaScripts\MainPage\scorll.js" />
+    <Content Include="JavaScripts\MainPage\swiper.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="MainPage.aspx" />
+    <Content Include="PhoneCode.aspx" />
+    <Content Include="Rank.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="TestManage.aspx" />
+    <Content Include="TopicExercise.aspx" />
+    <Content Include="TopicManage.aspx" />
+    <Content Include="UserPage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="ExamManage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackStage.Master.cs">
+      <DependentUpon>BackStage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackStage.Master.designer.cs">
+      <DependentUpon>BackStage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\CheckAnsware.ashx.cs">
+      <DependentUpon>CheckAnsware.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\CheckTestName.ashx.cs">
+      <DependentUpon>CheckTestName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\DelTestInfo.ashx.cs">
+      <DependentUpon>DelTestInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\ExamManage.ashx.cs">
+      <DependentUpon>ExamManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\FindExam.ashx.cs">
+      <DependentUpon>FindExam.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\GetTopicByTabName.ashx.cs">
+      <DependentUpon>GetTopicByTabName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\MainPage-Topic.ashx.cs">
+      <DependentUpon>MainPage-Topic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\MainPage-userinfo.ashx.cs">
+      <DependentUpon>MainPage-userinfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\MainPage-username.ashx.cs">
+      <DependentUpon>MainPage-username.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralHandler\TestManage.ashx.cs">
+      <DependentUpon>TestManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-AcountLogin.ashx.cs">
+      <DependentUpon>Handler-AcountLogin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-Code.ashx.cs">
+      <DependentUpon>Handler-Code.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-Login__Acount.ashx.cs">
+      <DependentUpon>Handler-Login__Acount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-Login__Phone.ashx.cs">
+      <DependentUpon>Handler-Login__Phone.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-PhoneLogin.ashx.cs">
+      <DependentUpon>Handler-PhoneLogin.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-Register.ashx.cs">
+      <DependentUpon>Handler-Register.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-Register__Acount.ashx.cs">
+      <DependentUpon>Handler-Register__Acount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler-Register__Phone.ashx.cs">
+      <DependentUpon>Handler-Register__Phone.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneCode.aspx.cs">
+      <DependentUpon>PhoneCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhoneCode.aspx.designer.cs">
+      <DependentUpon>PhoneCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExamManage.aspx.cs">
+      <DependentUpon>ExamManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExamManage.aspx.designer.cs">
+      <DependentUpon>ExamManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rank.aspx.cs">
+      <DependentUpon>Rank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rank.aspx.designer.cs">
+      <DependentUpon>Rank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestManage.aspx.cs">
+      <DependentUpon>TestManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestManage.aspx.designer.cs">
+      <DependentUpon>TestManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopicExercise.aspx.cs">
+      <DependentUpon>TopicExercise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopicExercise.aspx.designer.cs">
+      <DependentUpon>TopicExercise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopicManage.aspx.cs">
+      <DependentUpon>TopicManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopicManage.aspx.designer.cs">
+      <DependentUpon>TopicManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage.aspx.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage.aspx.designer.cs">
+      <DependentUpon>UserPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BackStage.Master" />
+    <Content Include="GeneralHandler\ExamManage.ashx" />
+    <Content Include="GeneralHandler\TestManage.ashx" />
+    <Content Include="GeneralHandler\CheckTestName.ashx" />
+    <Content Include="GeneralHandler\DelTestInfo.ashx" />
+    <Content Include="GeneralHandler\FindExam.ashx" />
+    <Content Include="GeneralHandler\GetTopicByTabName.ashx" />
+    <Content Include="GeneralHandler\CheckAnsware.ashx" />
+    <Content Include="JavaScripts\Login\register.src" />
+    <Content Include="fonts\bootstrap.eot" />
+    <Content Include="fonts\bootstrap.ttf" />
+    <Content Include="fonts\bootstrap.woff" />
+    <Content Include="fonts\iconfont.eot" />
+    <Content Include="fonts\iconfont.ttf" />
+    <Content Include="fonts\iconfont.woff" />
+    <Content Include="Images\Login\icons\.DS_Store" />
+    <Content Include="Handler\Handler-AcountLogin.ashx" />
+    <Content Include="Handler\Handler-Code.ashx" />
+    <Content Include="Handler\Handler-Login__Acount.ashx" />
+    <Content Include="Handler\Handler-Login__Phone.ashx" />
+    <Content Include="Handler\Handler-PhoneLogin.ashx" />
+    <Content Include="Handler\Handler-Register.ashx" />
+    <Content Include="Handler\Handler-Register__Acount.ashx" />
+    <Content Include="Handler\Handler-Register__Phone.ashx" />
+    <Content Include="GeneralHandler\MainPage-Topic.ashx" />
+    <Content Include="GeneralHandler\MainPage-userinfo.ashx" />
+    <Content Include="GeneralHandler\MainPage-username.ashx" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Excels\" />
+    <Folder Include="JavaScripts\BackState\Rank\" />
+    <Folder Include="JavaScripts\BackState\TopicManage\" />
+    <Folder Include="JavaScripts\UserPage\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{e942fdec-f781-4a62-8d70-1e980a63d463}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{362376b7-13dc-436d-b96c-d4df5aa75688}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56634</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44353/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

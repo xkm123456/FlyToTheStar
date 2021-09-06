@@ -1,0 +1,9 @@
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\bin\Debug\DAL.dll
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\bin\Debug\DAL.pdb
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\bin\Debug\Model.dll
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\bin\Debug\Model.pdb
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\obj\Debug\DAL.csproj.CopyComplete
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\obj\Debug\DAL.dll
+F:\卓越项目\飞星网导航栏所有页面(ASP)\飞星网\FlyToTheStar\DAL\obj\Debug\DAL.pdb

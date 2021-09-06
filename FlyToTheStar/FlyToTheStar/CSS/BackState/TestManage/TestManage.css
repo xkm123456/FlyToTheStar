@@ -1,0 +1,288 @@
+/* 
+header     头部
+main    主要内容
+nav     左侧导航栏
+content 点击导航栏对应具体页面(显示到此容器中)
+*/
+
+/* 右侧对应功能页面 */
+#content{
+    position: relative;
+    display:inline-block;
+    width: 82.5%;
+    height: 700px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+    margin: 55px 0 0 15px;
+    background-color: #fff;
+}
+
+/* 试卷类型分类 */
+.type{
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 15px;           
+}
+
+.type h4{
+    float: left;
+    margin: 0px 15px;
+    font-weight: normal;
+}
+
+.type ul li{
+    float: left;
+}
+
+.type ul li a{
+    display: block;
+    width: 160px;
+    height: 28px;
+    border: 2px solid skyblue;
+    margin-left: 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: skyblue;
+}
+
+/* li点击后的样式 */
+#content .typestyle{
+    color: white;
+    background-color: skyblue;
+}
+.addexam{
+    position:absolute;
+    right: 20px;
+    width: 110px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: skyblue;
+    font-size: 15px;
+    line-height: 30px;
+    color: white;
+}
+.addexam p{
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.addlogo{
+    display: inline-block;
+    width: 23px;
+    margin-left: 5px;
+}
+.addlogo img{
+    vertical-align:top;
+    margin-top: 3px;
+    width: 100%;
+}
+/* 下方显示试卷 */
+.exambox{
+    width: 97%;
+    height: 365px;
+    border:1px solid #d9d9d9;
+    border-radius: 6px;
+    margin: 0px auto;
+    overflow: auto;
+}
+
+/* 修改滚动条样式 */
+.exambox::-webkit-scrollbar {
+    width:6px;
+    height:640px;     
+}
+.exambox::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+.exambox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+ }
+
+.exambox table{
+    width: 97%;
+    border-radius: 10px;
+    margin: 20px auto;
+    font-size: 17px;
+}
+
+.exambox table a{
+    color: rgb(86, 188, 156);
+}
+
+
+/* 点击添加试卷之后显示的步骤 */
+.addexambox{
+    position: relative;
+    width: 100%;
+    height: 97%;
+}
+
+/* 第一步样式 */
+.examxieyibox{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 420px;
+    height: 110px;
+    line-height: 40px;
+}
+#txtExamName{
+    width: 300px;
+    height: 35px;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    padding-left: 10px;
+    transition: all .2s;
+}
+.xieyi{
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    margin-top: 20px;
+}
+.xieyi a{
+    color: rgb(86, 188, 156);
+}
+.xieyi a:hover{
+    color: rgb(86, 188, 156);
+}
+
+/* 第二步样式 */
+/* 搜索试卷和新增试卷 */
+.findbox{
+    position: relative;
+    width: 95%;
+    height: 30px;
+    margin: 23px;     
+}
+.find{
+    position: absolute;
+    right: 3.8%;
+    width: 200px;
+    height: 30px;
+}
+/* 搜索文本框样式 */
+#txtfind{
+    width: 100%;
+    height: 21px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 4px;
+    border:1px solid #d9d9d9;
+    padding: 4px 31px;
+    transition: all .2s;
+}
+
+/* 被点击之后的样式 */
+.findclick{
+    box-shadow: 0px 0px 5px 1px skyblue;
+}
+
+/* 放大镜 */
+.findlogo{
+    position:absolute;
+    top: 6px;
+    left: 9px;
+    width: 20px;
+    height: 20px;
+    background: url("/Images/findlogo.png") no-repeat;
+    background-size: 16px;
+}
+
+/* 搜索按钮 */
+.findbtn{
+    position:absolute;
+    top: 0px;
+    right: -52px;
+    width: 30px;
+}
+.findbtn img{
+    width: 100%;
+}
+
+/* 下方显示试卷的盒子 */
+.exambox{
+    width: 97%;
+    height: 550px;
+    border:1px solid #d9d9d9;
+    border-radius: 6px;
+    margin: 0px auto;
+    overflow:auto;
+}
+/* 修改滚动条样式 */
+ .exambox::-webkit-scrollbar {
+     width:6px;
+	 height:640px;     
+ }
+ .exambox::-webkit-scrollbar-thumb {
+     border-radius: 3px;
+     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+     background: rgba(0,0,0,0.2);
+ }
+ .exambox::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.2);
+     border-radius: 0;
+     background: rgba(0,0,0,0.1);
+  }
+
+.exambox table{
+    width: 97%;
+    border-radius: 10px;
+    margin: 20px auto;
+    font-size: 17px;
+}
+
+.exambox table a{
+    color: rgb(86, 188, 156);
+}
+
+
+/* 第三步考试时长设置 */
+.timesetpassbox{
+    width: 600px;
+    height: 100%;
+    margin-left: 20%;
+}
+.timesetpassbox h4{
+    font-weight: bold;
+}
+.timesetbox{
+    padding: 90px;
+}
+.timesetbox p{
+    margin: 10px;
+}
+#txtexamtime,#txtpass{
+    width: 80px;
+    border: 1px solid #d9d9d9;
+    border-radius: 3px;
+    padding: 5px;
+    transition: all .3s;
+}
+
+
+/* 第四步.考试配置成功 */
+.examsuccess{
+    width: 300px;
+    height: 100px;
+    margin: 80px auto;
+    text-align: center;
+}
+.examsuccess h2{
+    font-weight: bold;
+}
+.examsuccess p{
+    margin-top: 100px;
+} 
+
+.examsuccess p a{
+    margin: 30px;
+    color: rgb(86, 188, 156);
+}
